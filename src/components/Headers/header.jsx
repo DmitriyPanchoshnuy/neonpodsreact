@@ -1,4 +1,4 @@
-import { Component, View } from 'react';
+import { Component } from 'react';
 import './header.css';
 
 export class Header extends Component {
