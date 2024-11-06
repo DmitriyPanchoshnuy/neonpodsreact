@@ -1,6 +1,9 @@
 .neonlogo {
     text-shadow: 2px 2px 5px #5ee2ff;
     color: #5effff;
+    font-family: "Lilita One", sans-serif;
+    letter-spacing: 0.6px;
+    word-spacing: 2.8px;
 }
 
 .mainContent {
