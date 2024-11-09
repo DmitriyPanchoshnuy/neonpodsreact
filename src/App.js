@@ -6,7 +6,7 @@ import GeneralPage from "./Pages/GeneralPage/general";
 
 const tg = window.Telegram.WebApp;
 
-function App() {
+export default function App() {
 
   useEffect(() => {
     tg.ready()
@@ -16,11 +16,8 @@ function App() {
   return (
     // <Suspense fallback={<div className="container">Loading...</div>}>
       <Routes>
-          <Route path='/' element={<GeneralPage/>} />
-          <Route path='/categories' />
-        </Routes>
-    // </Suspense>
+        <Route path='/' element={<GeneralPage/>}/>
+        <Route path='/categories/:id' />
+      </Routes>
   );
 }
-
-export default App;
