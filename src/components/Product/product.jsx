@@ -1,9 +1,9 @@
 import "./product.css";
 
-export function Product() {
+export function Product(props) {
     return (
         <div>
-            {this.props.children}
+            {props.children}
         </div>
     )
 }

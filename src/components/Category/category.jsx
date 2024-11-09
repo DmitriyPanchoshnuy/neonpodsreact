@@ -1,12 +1,12 @@
 import "./category.css";
 import "bootstrap-icons/font/bootstrap-icons.css"
 
-export function Category () {
+export function Category (props) {
 
     return (
         <div className="category">
             <div className="header">
-                <div className="title">{this.props.title}</div>
+                <div className="title">{props.title}</div>
                 <div className="actionbutton">
                     <button>
                         <i class="bi bi-arrow-right"></i>
@@ -15,7 +15,7 @@ export function Category () {
             </div>
 
             <div className="content">
-                {this.props.children}
+                {props.children}
             </div>
         </div>
     )
