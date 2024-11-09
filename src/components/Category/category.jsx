@@ -4,8 +4,6 @@ import "bootstrap-icons/font/bootstrap-icons.css"
 import { useNavigate } from "react-router-dom";
 
 export class Category extends Component {
-    static navigator = useNavigate()
-
     render() {
         return (
             <div className="category">
