@@ -1,0 +1,29 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.category {
+    margin-top: 8px
+}
+
+.title {
+    font-size: 140%;
+    margin-left: 4px;
+}
+
+.actionbutton {
+    margin-right: 12px;
+}
+
+button {
+    background: none;
+    border: none;
+    padding: 3px 5px;
+    font-size: 110%;
+}
+
+.content {
+    margin-left: 8px;
+}
