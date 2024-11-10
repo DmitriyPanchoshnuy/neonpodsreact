@@ -26,4 +26,12 @@ button {
 
 .content {
     margin-left: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* Styles use only for product this page */
+.product-item {
+    width: 150px;
 }

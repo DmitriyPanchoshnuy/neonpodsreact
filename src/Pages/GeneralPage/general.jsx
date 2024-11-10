@@ -19,7 +19,7 @@ export default function GeneralPage() {
     <div className="App">
       <Category title={"Акційні товари"}>
         {products.map((product, index) => (
-            <Product>{product.title} | {product.price} грн</Product>
+            <Product product={product} />
           ))}
       </Category>
       <Category title={"Картріджі"}>Тут будуть Картріджі</Category>
