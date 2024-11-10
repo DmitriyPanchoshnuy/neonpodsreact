@@ -12,14 +12,12 @@ export default function GeneralPage() {
   useEffect(() => {
     getProducts().then((data) => {
       setProducts(data);
-      console.log(data)
     });
     
-  }, [])
+  }, [products])
 
   return (
     <div className="App">
-      <Header></Header>
       <Category title={"Акційні товари"}>
         {products.map((product, index) => (
             <Product>{product.title} | {product.price} грн</Product>

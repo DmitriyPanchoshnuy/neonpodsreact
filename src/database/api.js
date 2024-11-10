@@ -16,3 +16,15 @@ export async function getProducts() {
   }
   return data;
 }
+
+export async function getClients() {
+  const { data, error } = await supabase
+    .from('clients')
+    .select('*');
+  
+    if (error) {
+      console.error('Error fetching clients', error);
+      return [];
+    }
+    return data;
+}
