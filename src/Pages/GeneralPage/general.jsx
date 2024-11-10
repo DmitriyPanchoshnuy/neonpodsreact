@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import './general.css';
-import { Header } from '../../components/Headers/header.jsx';
 import { Category } from '../../components/Category/category';
 import { Product } from '../../components/Product/product';
 
