@@ -12,14 +12,18 @@ export function Product(props) {
             <div className="container-image">
                 <img className="image" src={product.image_url} alt="Картинка товару"/>
             </div>
-            <div>
-                <div>
-                    <p>{product.title}</p>
+            <div className="content">
+                <div className="title">
+                    {product.title}
                 </div>
-                <div>
-                    {product.price}
+                <div className="price">
+                    {product.price} грн
                 </div>
             </div>
+
+            <button>
+                До кошика
+            </button>
         </div>
     )
 }
