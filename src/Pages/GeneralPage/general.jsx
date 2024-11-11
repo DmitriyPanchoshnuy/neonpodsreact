@@ -30,7 +30,7 @@ export default function GeneralPage() {
   return (
     <div className="App">
       {groupedProducts.map(({category, products}) => (
-        <Category key={category.id} title={category.title}>
+        <Category key={category.id} category={category}>
           {
             products.map((product) => (
               <Product key={product.id} product={product} />
@@ -41,13 +41,3 @@ export default function GeneralPage() {
     </div>
   );
 }
-
-
-// <Category title={"Акційні товари"}>
-// {products.map((product, index) => (
-//    <Product product={product} />
-//  ))}
-//</Category>
-//<Category title={"Картріджі"}>Тут будуть Картріджі</Category>
-//<Category title={"Жижі"}>А тут жижі</Category>
-//<Category title={"Под системи"}>А сюди розмістити под системи</Category>

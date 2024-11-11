@@ -6,7 +6,6 @@
 
 .category-item {
     margin: 8px auto;
-    
 }
 
 .category-item .title {
@@ -31,9 +30,10 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    overflow-x: scroll;
 }
 
 /* Styles use only for product this page */
 .product-item {
-    width: 160px;
+    width: 180px;
 }

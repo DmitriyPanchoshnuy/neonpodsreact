@@ -8,7 +8,20 @@ const supabase = createClient(supabaseUrl, supabaseKey)
 export async function getProducts() {
   const { data, error } = await supabase
     .from('products')
-    .select('*');
+    .select("*")
+
+  if (error) {
+    console.error('Error fetching products:', error);
+    return [];
+  }
+  return data;
+}
+
+export async function getProductsWhere(column, value) {
+  const { data, error } = await supabase
+    .from('products')
+    .select("*")
+    .eq(column, value)
 
   if (error) {
     console.error('Error fetching products:', error);
@@ -28,7 +41,6 @@ export async function getCategories() {
   }
   return data;
 }
-
 
 export async function getClients() {
   const { data, error } = await supabase
