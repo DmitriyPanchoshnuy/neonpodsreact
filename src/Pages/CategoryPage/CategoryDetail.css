@@ -1,5 +1,33 @@
-.CategoryDetailProductList {
+.CategoryDetail-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.CategoryDetail-item .CategoryDetailProductList {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    flex-grow: 1;
+    justify-content: center;
+    overflow-y: scroll;
+    width: 100%;
+}
+
+
+.CategoryDetail-item .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.CategoryDetail-item .header .title {
+    font-weight: bold;
+}
+
+.CategoryDetail-item .header .buttonback button {
+    background-color: inherit;
+    border: none;
+    font-size: 1.6rem;
+    margin: 0px 8px;
 }

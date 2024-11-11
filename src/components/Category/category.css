@@ -1,31 +1,25 @@
-.category-item .header {
+.category-item {
+    margin: 8px auto;
+}
+
+.category-item > .header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.category-item {
-    margin: 8px auto;
-}
-
-.category-item .title {
-    font-size: 140%;
+.category-item > .header > .title {
+    font-size: 1.4rem;
     margin-left: 4px;
     font-weight: 600;
 }
 
-.category-item .actionbutton {
+.category-item > .header > .actionbutton {
     margin-right: 12px;
+    font-size: 1.6rem;
 }
 
-.category-item button {
-    background: none;
-    border: none;
-    padding: 3px 5px;
-    font-size: 110%;
-}
-
-.category-item .content {
+.category-item > .content {
     margin-left: 8px;
     display: flex;
     flex-direction: row;
