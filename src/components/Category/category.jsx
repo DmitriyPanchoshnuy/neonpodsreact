@@ -4,7 +4,7 @@ import "bootstrap-icons/font/bootstrap-icons.css"
 export function Category (props) {
 
     return (
-        <div className="category">
+        <div className="category-item">
             <div className="header">
                 <div className="title">{props.title}</div>
                 <div className="actionbutton">

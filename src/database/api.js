@@ -17,6 +17,19 @@ export async function getProducts() {
   return data;
 }
 
+export async function getCategories() {
+  const { data, error } = await supabase
+    .from('categories')
+    .select('*');
+
+  if (error) {
+    console.error('Error fetching products:', error);
+    return [];
+  }
+  return data;
+}
+
+
 export async function getClients() {
   const { data, error } = await supabase
     .from('clients')

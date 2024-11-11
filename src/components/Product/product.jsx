@@ -17,12 +17,12 @@ export function Product(props) {
                     {product.title}
                 </div>
                 <div className="price">
-                    {product.price} грн
+                    
                 </div>
             </div>
 
             <button>
-                До кошика
+                {product.price} грн <i class="bi bi-cart-plus"></i>
             </button>
         </div>
     )
