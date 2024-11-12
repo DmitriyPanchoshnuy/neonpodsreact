@@ -7,6 +7,8 @@ import { useTelegram } from './Hooks/useTelegram';
 import { Header } from './components/Headers/header';
 import CategoryDetail from './Pages/CategoryPage/CategoryDetail';
 
+import SectionDetail from './Pages/SectionPage/SectionDetail';
+
 export default function App() {
   const { tg } = useTelegram();
 
@@ -17,9 +19,10 @@ export default function App() {
 
   return (
     <div>
-      <Header></Header>
+      <Header/>
       <Routes>
         <Route path='/' element={<GeneralPage/>}/>
+        <Route path='/section/:slug' element={<SectionDetail/>} />
         <Route path='/categories/:slug' element={<CategoryDetail/>}/>
       </Routes>
     </div>

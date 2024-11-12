@@ -2,12 +2,19 @@ import { Link } from "react-router-dom";
 import "./category.css";
 import "bootstrap-icons/font/bootstrap-icons.css"
 import { useEffect, useState } from "react";
+import { Product } from "../Product/product";
+import { getProducts, getProductsWhere } from "../../database/api";
 
 export function Category (props) {
     const [category, setCategory] = useState({});
+    const [products, setProducts] = useState([])
 
     useEffect(() => {
-        setCategory(props.category)
+        setCategory(props.category);
+
+        getProductsWhere('category', props.category.id).then((data) => {
+            setProducts(data)
+        })
     }, [props.category])
 
 
@@ -23,7 +30,9 @@ export function Category (props) {
             </div>
 
             <div className="content">
-                {props.children}
+                {products.map((product) => (
+                    <Product key={product.id} product={product} />
+                ))}
             </div>
         </div>
     )

@@ -1,43 +1,28 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './general.css';
-import { Category } from '../../components/Category/category';
-import { Product } from '../../components/Product/product';
-
-import { getProducts, getCategories } from '../../database/api';
+import { getSections } from '../../database/api';
 
 export default function GeneralPage() {
-  const [products, setProducts] = useState([]);
-  const [categories, setCategory] = useState([]);
+  const [sections, setSections] = useState([]);
 
   useEffect(() => {
-    getProducts().then((data) => {
-      setProducts(data);
-    });
-
-    getCategories().then((data) => {
-      setCategory(data)
-    });
-    
+    getSections().then((data) => {
+      setSections(data)
+    })
   }, [])
-
-  const groupedProducts = categories.map((category) => {
-    return {
-      category,
-      products: products.filter(product => product.category === category.id),
-    };
-  });
 
   return (
     <div className="App">
-      {groupedProducts.map(({category, products}) => (
-        <Category key={category.id} category={category}>
-          {
-            products.map((product) => (
-              <Product key={product.id} product={product} />
-            ))
-          }
-        </Category>
-      ))}
+      <div>
+        Що ви бажаєте замовити?
+
+      </div>
+      <div className='SectionList'>
+        {sections.map((section) => (
+          <Link to={`/section/${section.id}`}>{section.title}</Link>
+        ))}
+      </div>
     </div>
   );
 }
