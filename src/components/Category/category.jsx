@@ -3,7 +3,7 @@ import "./category.css";
 import "bootstrap-icons/font/bootstrap-icons.css"
 import { useEffect, useState } from "react";
 import { Product } from "../Product/product";
-import { getProducts, getProductsWhere } from "../../database/api";
+import { getProductsWhere } from "../../database/api";
 
 export function Category (props) {
     const [category, setCategory] = useState({});
