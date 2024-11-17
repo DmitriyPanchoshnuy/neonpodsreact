@@ -11,7 +11,7 @@ export default function GeneralPage() {
     return JSON.parse(localStorage.getItem('basket')) || [];
   })
 
-  const {tg} = useTelegram();
+  const {tg, onClose} = useTelegram();
 
   useEffect(() => {
     getSections().then((data) => {
@@ -35,16 +35,22 @@ export default function GeneralPage() {
       {basket.map((product) => (
         product
       ))}
+      <br />
       <button onClick={() => {
         tg.sendData(JSON.stringify(basket))
       }}>
         Замовити
       </button>
+      <br />
       <button onClick={() => {
         localStorage.clear('basket');
         setBasket([])
       }}>
         Clear
+      </button>
+      <br />
+      <button onClick={() => {onClose()}}>
+        CLOSE
       </button>
     </div>
   );
