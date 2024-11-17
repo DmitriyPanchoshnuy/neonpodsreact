@@ -11,7 +11,7 @@ export default function GeneralPage() {
     return JSON.parse(localStorage.getItem('basket')) || [];
   })
 
-  const {tg, onClose} = useTelegram();
+  const {tg} = useTelegram();
 
   useEffect(() => {
     getSections().then((data) => {
