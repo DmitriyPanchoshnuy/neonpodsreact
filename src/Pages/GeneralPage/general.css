@@ -1,10 +1,22 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+div.SectionList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+}
 
-} 
-body {
-  background-color: var(--tg-theme-bg-color);
-  color: var(--tg-theme-text-color)
+a.button-section {
+  width: 45%;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, .2);
+}
+
+@media screen and (min-width: 600px) {
+  a.button-section {
+    text-align: center;
+  }
 }

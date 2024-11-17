@@ -3,8 +3,15 @@ import { Link } from 'react-router-dom';
 import './general.css';
 import { getSections } from '../../database/api';
 
+import { useTelegram } from '../../Hooks/useTelegram';
+
 export default function GeneralPage() {
   const [sections, setSections] = useState([]);
+  const [basket, setBasket] = useState(() => {
+    return JSON.parse(localStorage.getItem('basket')) || [];
+  })
+
+  const {tg} = useTelegram();
 
   useEffect(() => {
     getSections().then((data) => {
@@ -20,9 +27,25 @@ export default function GeneralPage() {
       </div>
       <div className='SectionList'>
         {sections.map((section) => (
-          <Link to={`/section/${section.id}`}>{section.title}</Link>
+          <Link to={`/section/${section.id}`} className='button-section'>
+              {section.title}
+          </Link>
         ))}
       </div>
+      {basket.map((product) => (
+        product
+      ))}
+      <button onClick={() => {
+        tg.sendData(JSON.stringify(basket))
+      }}>
+        Замовити
+      </button>
+      <button onClick={() => {
+        localStorage.clear('basket');
+        setBasket([])
+      }}>
+        Clear
+      </button>
     </div>
   );
 }

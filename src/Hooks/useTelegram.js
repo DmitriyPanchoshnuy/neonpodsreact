@@ -7,7 +7,7 @@ export function useTelegram() {
   }
 
   return {
-    onClose,
     tg,
+    onClose,
   }
 }

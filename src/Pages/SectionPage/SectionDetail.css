@@ -1,0 +1,20 @@
+.SectionDetail .page-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.SectionDetail .page-header .action-button button.BackArrow {
+    background-color: inherit;
+    border: none;
+    font-size: 1.6rem;
+    margin: 0px 8px;
+}
+.SectionDetail .page-header .title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    position: absolute;
+    left: 20%;
+    right: 20%;
+    text-align: center;
+}

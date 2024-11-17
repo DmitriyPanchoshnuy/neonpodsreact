@@ -26,11 +26,21 @@ export default function SectionDetail(props) {
     }, [slug])
 
     return (
-        <div>
-            <button onClick={() => {navigate(-1)}}>
-                <i class="bi bi-arrow-left"></i>
-            </button>
-            {itsSection.title}
+        <div className="SectionDetail">
+            <div className="page-header">
+                <div className="action-button">
+
+                    <button className="BackArrow" onClick={() => { navigate(-1) }}>
+                        <i class="bi bi-arrow-left"></i>
+                    </button>
+                </div>
+
+                <div className="title">
+                    {itsSection.title}
+                </div>
+
+            </div>
+
             <div>
                 {categories.map((category) => (
                     <Category category={category} />
