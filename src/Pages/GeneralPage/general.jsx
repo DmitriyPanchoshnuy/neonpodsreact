@@ -23,11 +23,10 @@ export default function GeneralPage() {
     <div className="App">
       <div>
         Що ви бажаєте замовити?
-
       </div>
       <div className='SectionList'>
         {sections.map((section) => (
-          <Link to={`/section/${section.id}`} className='button-section'>
+          <Link to={`/section/${section.id}`} className='button-section' key={section.id}>
               {section.title}
           </Link>
         ))}
@@ -37,7 +36,7 @@ export default function GeneralPage() {
       ))}
       <br />
       <button onClick={() => {
-        tg.sendData(JSON.stringify(basket))
+        tg.sendData(JSON.stringify(basket));
       }}>
         Замовити
       </button>
@@ -49,9 +48,6 @@ export default function GeneralPage() {
         Clear
       </button>
       <br />
-      <button onClick={() => {onClose()}}>
-        CLOSE
-      </button>
     </div>
   );
 }
