@@ -36,7 +36,6 @@ export default function GeneralPage() {
       ))}
       <br />
       <button onClick={() => {
-        alert(JSON.stringify(basket));
         tg.sendData(JSON.stringify(basket));
       }}>
         Замовити
