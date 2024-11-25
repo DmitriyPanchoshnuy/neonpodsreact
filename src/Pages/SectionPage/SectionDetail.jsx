@@ -1,17 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { getCategoriesWhere, getSectionsWhere } from "../../database/api";
-import { useNavigate, useParams } from "react-router-dom";
-
-import "bootstrap-icons/font/bootstrap-icons.css";
+import { useParams } from "react-router-dom";
 
 import "./SectionDetail.css";
 import { Category } from "../../components/Category/category";
+import NavigatorBar from "../../components/Navigation/navigators";
 
 export default function SectionDetail(props) {
     const [itsSection, setItsSection] = useState({});
     const [categories, setCategories] = useState([]);
-
-    const navigate = useNavigate();
 
     const { slug } = useParams();
 
@@ -27,19 +24,7 @@ export default function SectionDetail(props) {
 
     return (
         <div className="SectionDetail">
-            <div className="page-header">
-                <div className="action-button">
-
-                    <button className="BackArrow" onClick={() => { navigate(-1) }}>
-                        <i class="bi bi-arrow-left"></i>
-                    </button>
-                </div>
-
-                <div className="title">
-                    {itsSection.title}
-                </div>
-
-            </div>
+            <NavigatorBar title={itsSection.title} />
 
             <div>
                 {categories.map((category) => (

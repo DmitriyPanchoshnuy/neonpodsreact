@@ -1,0 +1,28 @@
+.NavigatorBar {
+    display: flex;
+    
+}
+
+.NavigatorBar .ActionButtonList {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.NavigatorBar .ActionButtonList .ActionButton {
+    background-color: inherit;
+    border: none;
+    font-size: 1.6rem;
+    margin: 0px 8px;
+}
+
+.NavigatorBar .title {
+    font-size: clamp(1.4rem, 2vw, 1.8rem);
+    font-weight: bold;
+    position: absolute;
+    left: 14%;
+    right: 14%;
+    text-align: center;
+
+    white-space: nowrap;
+}

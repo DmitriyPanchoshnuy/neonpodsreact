@@ -6,6 +6,7 @@ import { Product } from "../../components/Product/product";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 import "./CategoryDetail.css";
+import NavigatorBar from "../../components/Navigation/navigators";
 
 export default function CategoryDetail(props) {
     const [itsCategory, setItsCategory] = useState({});
@@ -27,16 +28,7 @@ export default function CategoryDetail(props) {
 
     return (
         <div className="CategoryDetail-item">
-            <div className="header">
-                <div className="buttonback">
-                    <button onClick={() => {navigate(-1)}}>
-                        <i class="bi bi-arrow-left"></i>
-                    </button>
-                </div>
-                <div className="title">
-                    {itsCategory.title}
-                </div>
-            </div>
+            <NavigatorBar title={itsCategory.title} />
 
             <div className="CategoryDetailProductList">
                 {products.map((product) => (
