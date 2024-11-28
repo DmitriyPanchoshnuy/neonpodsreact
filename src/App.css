@@ -7,24 +7,12 @@
 }
 
 body {
-  background-color: var(--tg-theme-bg-color);
-  color: var(--tg-theme-text-color);
-  background: rgb(36,200,203);
-  background: radial-gradient(circle, rgba(36,200,203,1) 0%, rgba(92,22,159,1) 86%);  
-}
-
-
-html {
   font-size: 18px;
-}
+  backdrop-filter: blur(20px) brightness(80%);
+  background: rgb(158,33,140);
+  background: linear-gradient(132deg, rgba(158,33,140,1) 0%, rgba(190,1,164,1) 14%, rgba(255,0,221,1) 36%, rgba(244,44,219,1) 52%, rgba(255,0,223,1) 67%, rgba(179,0,158,1) 86%, rgba(125,0,119,1) 100%, rgba(188,23,165,1) 181%);}
 
-@media screen and (max-width: 340px) {
-  html {
-    font-size: 14px;
-  }
-}
-
-
-a {
-  text-decoration: none;
+div#root {
+  min-height: 100vh;
+  height: 100vh;
 }
