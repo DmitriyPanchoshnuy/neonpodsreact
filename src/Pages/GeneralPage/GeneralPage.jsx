@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom"
 import { getSections } from "../../database/api.js"
 
-import { Button } from "@Shared/Button/Button.jsx";
+import Button from "../../Shared/Button/Button.jsx";
 export default function GeneralPage(props) {
   const [sections, setSections] = useState([]);
 
