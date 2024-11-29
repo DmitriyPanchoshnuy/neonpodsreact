@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom"
 import { getSections } from "../../database/api.js"
 
+import { Button } from "@Shared/Button/Button.jsx";
 export default function GeneralPage(props) {
   const [sections, setSections] = useState([]);
 
@@ -23,7 +24,7 @@ export default function GeneralPage(props) {
       <div className="SectionList">
         {sections.map((section) => (
           <div className="SectionItem">
-            {section.title}
+             <Button text={section.title}/>
           </div>
         ))}
       </div>
