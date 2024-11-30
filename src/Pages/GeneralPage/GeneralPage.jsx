@@ -2,9 +2,10 @@ import "./GeneralPage.css";
 import { useEffect, useState } from "react";
 
 import { Link, useNavigate } from "react-router-dom"
-import { getSections } from "../../database/api.js"
+import { getSections } from "../../Shared/API/DataBase/api.js"
 
-import Button from "../../Shared/Button/Button.jsx";
+import Button from "../../Shared/UI/Button//Button.jsx";
+
 export default function GeneralPage(props) {
   const [sections, setSections] = useState([]);
 

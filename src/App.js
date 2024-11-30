@@ -2,9 +2,9 @@ import { useEffect } from 'react';
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 
-import { useTelegram } from './Hooks/useTelegram';
+import { useTelegram } from './Shared/Hooks/useTelegram';
 
-import HeaderComponent from './components/Header/Header';
+import HeaderComponent from './Shared/UI/Header/Header';
 import GeneralPage from './Pages/GeneralPage/GeneralPage';
 
 export default function App() {
