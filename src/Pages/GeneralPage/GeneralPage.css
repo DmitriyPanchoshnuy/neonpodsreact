@@ -6,9 +6,4 @@ div.GeneralPageContainer > div.SectionList {
   font-size: 1rem;
 }
 
-div.GeneralPageContainer > div.SectionList > div.SectionItem {
-  text-align: center;
-  padding: 10px 20px;
-  background-color: rgba(0, 0, 0, .2);
-  border-radius: 10px;
-}
+

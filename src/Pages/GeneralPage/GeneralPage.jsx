@@ -23,9 +23,9 @@ export default function GeneralPage(props) {
       <p>Оберіть бажану вами категорію</p>
       <div className="SectionList">
         {sections.map((section) => (
-          <div className="SectionItem">
-             <Button text={section.title}/>
-          </div>
+          <Button text={section.title}>
+            {section.title}
+          </Button>
         ))}
       </div>
     </div>
