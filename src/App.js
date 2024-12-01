@@ -8,6 +8,7 @@ import HeaderComponent from './Shared/UI/Header/Header';
 
 import GeneralPage from './Pages/GeneralPage/GeneralPage';
 import SectionPage from "./Pages/SectionPage/SectionPage.jsx"
+import CategoryDetail from "./Pages/CategoryPage/CategoryDetail.jsx"
 
 export default function App() {
   const { tg } = useTelegram();
@@ -16,13 +17,13 @@ export default function App() {
     tg.ready()
   }, [tg])
 
-  return (
+  return(
     <div>
       <HeaderComponent/>
       <Routes>
         <Route path='/' element={<GeneralPage/>} />
         <Route path='/section/:slug' element={<SectionPage/>} />
-        {/* <Route path='/categories/:slug' element={<CategoryDetail/>}/> */}
+        <Route path='/categories/:slug' element={<CategoryDetail/>}/>
       </Routes>
     </div>
   );
