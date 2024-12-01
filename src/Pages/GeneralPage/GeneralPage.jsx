@@ -1,10 +1,10 @@
 import "./GeneralPage.css";
 import { useEffect, useState } from "react";
 
-import { Link, useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import { getSections } from "../../Shared/API/DataBase/api.js"
 
-import Button from "../../Shared/UI/Button//Button.jsx";
+import ActionButton from "../../Shared/UI/Button/ActionButton/ActionButton.jsx";
 
 export default function GeneralPage(props) {
   const [sections, setSections] = useState([]);
@@ -24,9 +24,9 @@ export default function GeneralPage(props) {
       <p>Оберіть бажану вами категорію</p>
       <div className="SectionList">
         {sections.map((section) => (
-          <Button text={section.title}>
+          <ActionButton text={section.title} onClick={() => {navigator("section/" + section.id)}}>
             {section.title}
-          </Button>
+          </ActionButton>
         ))}
       </div>
     </div>
