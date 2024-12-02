@@ -23,7 +23,7 @@ export default function App() {
       <Routes>
         <Route path='/' element={<GeneralPage/>} />
         <Route path='/section/:slug' element={<SectionPage/>} />
-        <Route path='/categories/:slug' element={<CategoryDetail/>}/>
+        <Route path='/category/:slug' element={<CategoryDetail/>}/>
       </Routes>
     </div>
   );
