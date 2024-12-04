@@ -24,7 +24,7 @@ export default function GeneralPage(props) {
       <p>Оберіть бажану вами категорію</p>
       <div className="SectionList">
         {sections.map((section) => (
-          <ActionButton onClick={() => {navigator("section/" + section.id)}}>
+          <ActionButton key={section.id} onClick={() => {navigator("section/" + section.id)}}>
             {section.title}
           </ActionButton>
         ))}
